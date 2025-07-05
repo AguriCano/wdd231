@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav a {
+    padding: 1rem;
+  }
+  
+  nav a:hover {
+  background-color: #777;
+}
+
+  #menu {
+    display: none;
+  }
+
+  .about-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .about-me,
+  .student-photo {
+    flex: 1;
+  }
+
+  #course-container {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WDD 231 Course Home Page" />
+  <meta name="author" content="Aguri Cano" />
+  <title>WDD 231 | Home</title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" type="module" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/slack.svg"alt="Site Logo">
+    <span>Course Home Page</span>
+    <button id="menu" aria-label="Menu">&#9776;</button>
+  </header>
+
+  <nav id="nav">
+    <a href="#">Home</a>
+    <a href="#">Chamber Project</a>
+    <a href="#">Final Project</a>
+  </nav>
+
+  <main>
+    <h1>Home Page</h1>
+
+    <section class="about-section">
+      <div class="about-me">
+        <h2>About Me</h2>
+        <p>I am a passionate and dedicated programmer with a strong background in web development, specializing in HTML, CSS, and JavaScript. I enjoy building clean, responsive, and user-friendly websites and applications. I am constantly learning and improving my skills, exploring new technologies and frameworks to stay up-to-date in the fast-paced world of programming. I approach each project with attention to detail and a problem-solving mindset. I enjoy collaborating with others, but I am also capable of working independently. My goal is to create efficient, scalable, and high-quality code that provides real value to users and meets modern development standards.</p>
+      </div>
+      <div class="student-photo">
+        <h2>ME</h2>
+        <img src="images/picture1.webp" alt="my-photo" />
+      </div>
+    </section>
+
+    <section class="courses">
+      <h2>Web Certificate Courses</h2>
+      <div class="filters">
+        <button id="all">All</button>
+        <button id="cse">CSE</button>
+        <button id="wdd">WDD</button>
+      </div>
+      <div id="course-container"></div>
+      <p class="credits">The total credits for course listed above is <span id="creditCount">0</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <i class="uil uil-github"></i>
+      <i class="uil uil-facebook"></i>
+      <i class="uil uil-linkedin"></i>
+    </div>
+    <p>&copy; <span id="currentyear"></span> Aguri Cano • Lima, Perú</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

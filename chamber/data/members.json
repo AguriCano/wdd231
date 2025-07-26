@@ -1,0 +1,112 @@
+[
+  {
+    "Name": "Falabella",
+    "Industry": "Retail",
+    "Physical Address": "Av. Arequipa 1234, Lima",
+    "Website": "https://www.falabella.com.pe",
+    "Phone": "01-8000-123",
+    "Representative": "N/A",
+    "MemberSince": "01/01/2020",
+    "Membership": "Gold",
+    "logo": "images/falabella.webp"
+  },
+  {
+    "Name": "Sodimac",
+    "Industry": "Retail",
+    "Physical Address": "Av. La Marina 456, Callao",
+    "Website": "https://www.sodimac.com.pe",
+    "Phone": "01-8000-456",
+    "Representative": "N/A",
+    "MemberSince": "01/01/2021",
+    "Membership": "Silver",
+    "logo": "images/sodimac.webp"
+  },
+  {
+    "Name": "Linio",
+    "Industry": "E-commerce",
+    "Physical Address": "Jr. Comercio 789, Lima",
+    "Website": "https://www.linio.com.pe",
+    "Phone": "01-8000-789",
+    "Representative": "N/A",
+    "MemberSince": "01/01/2018",
+    "Membership": "Bronze",
+    "logo": "images/linio.webp"
+  },
+  {
+    "Name": "Promart",
+    "Industry": "Retail",
+    "Physical Address": "Av. Javier Prado Este 1000, Lima",
+    "Website": "https://www.promart.pe",
+    "Phone": "01-801-234",
+    "Representative": "N/A",
+    "MemberSince": "01/01/2022",
+    "Membership": "Silver",
+    "logo": "images/promart.webp"
+  },
+  {
+    "Name": "Wong",
+    "Industry": "Supermarkets",
+    "Physical Address": "Av. Benavides 123, Miraflores",
+    "Website": "https://www.wong.pe",
+    "Phone": "01-811-111",
+    "Representative": "N/A",
+    "MemberSince": "01/01/2019",
+    "Membership": "Gold",
+    "logo": "images/wong.webp"
+  },
+  {
+    "Name": "Metro",
+    "Industry": "Supermarkets",
+    "Physical Address": "Av. Brasil 3210, Magdalena",
+    "Website": "https://www.metro.pe",
+    "Phone": "01-822-222",
+    "Representative": "N/A",
+    "MemberSince": "01/01/2020",
+    "Membership": "Bronze",
+    "logo": "images/metro.webp"
+  },
+  {
+    "Name": "Tottus",
+    "Industry": "Supermarkets",
+    "Physical Address": "Av. Universitaria 1300, Los Olivos",
+    "Website": "https://www.tottus.com.pe",
+    "Phone": "01-833-333",
+    "Representative": "N/A",
+    "MemberSince": "01/01/2021",
+    "Membership": "Silver",
+    "logo": "images/tottus.webp"
+  },
+  {
+    "Name": "Ripley",
+    "Industry": "Retail",
+    "Physical Address": "Av. Caminos del Inca 200, Surco",
+    "Website": "https://www.ripley.com.pe",
+    "Phone": "01-844-444",
+    "Representative": "N/A",
+    "MemberSince": "01/01/2017",
+    "Membership": "Bronze",
+    "logo": "images/ripley.webp"
+  },
+  {
+    "Name": "Hiraoka",
+    "Industry": "Electronics",
+    "Physical Address": "Av. Abancay 600, Cercado de Lima",
+    "Website": "https://www.hiraoka.com.pe",
+    "Phone": "01-855-555",
+    "Representative": "N/A",
+    "MemberSince": "01/01/2016",
+    "Membership": "Gold",
+    "logo": "images/hiraoka.webp"
+  },
+  {
+    "Name": "Plaza Vea",
+    "Industry": "Supermarkets",
+    "Physical Address": "Av. Angamos 300, Surquillo",
+    "Website": "https://www.plazavea.com.pe",
+    "Phone": "01-866-666",
+    "Representative": "N/A",
+    "MemberSince": "01/01/2018",
+    "Membership": "Silver",
+    "logo": "images/plazavea.webp"
+  }
+]

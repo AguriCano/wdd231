@@ -82,20 +82,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         phones.forEach((phone, index) => {
             if (phone && shuffledData[index]) {
-                phone.innerHTML = `Phone: ${shuffledData[index].Phone}`;
+                phone.innerHTML = `Teléfono: ${shuffledData[index].Phone}`;
             }
         });
 
         urls.forEach((url, index) => {
             if (url && shuffledData[index]) {
                 url.href = `${shuffledData[index].Website}`;
-                url.innerHTML = `Visit website`;
+                url.innerHTML = `Visita el sitio web`;
             }
         });
 
         members.forEach((member, index) => {
             if (member && shuffledData[index]) {
-                member.innerHTML = `Membership Level: ${shuffledData[index].Membership}`;
+                member.innerHTML = `Nivel de membresía: ${shuffledData[index].Membership}`;
             }
         });
 
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
         });
     } catch (error) {
-        console.error("Error getting data:", error);
+        console.error("Error al obtener los datos:", error);
     }
 });
 
@@ -118,13 +118,13 @@ const myLon = "-77.0428";
 const time = new Date();
 const day = time.getDay();
 const weekdays = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+    "Sábado",
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -153,10 +153,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         eventMainBox.innerHTML = `
                 <div class="current-weather">
-                    <h2>Current weather in: <span id="city-name">${data.name}</span></h2>
+                    <h2>El clima actual en: <span id="city-name">${data.name}</span></h2>
                     <h4>${weekdays[day]}</h4>
                     <div class="weather-content"></div>
-                    <p>Temperature: <span id="current-temp">${parseFloat(data.main.temp).toFixed(0)}&deg;F</span></p>
+                    <p>Temperatura: <span id="current-temp">${parseFloat(data.main.temp).toFixed(0)}&deg;F</span></p>
                     <figure>
                         <img id="weather-icon" src="${iconsrc}" alt="${desc}">
                         <figcaption>${desc}</figcaption>
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const forecast = document.createElement("article");
         forecast.className = "forecast";
         forecast.innerHTML = `
-                <h3>3-day weather forecast</h3>
+                <h3>Pronóstico del clima para 3 días</h3>
                 <div class="main-day-box">
                     <div class="day-box">
                         <h4 id="day-01">${weekdays[(day + 1) % 7]}</h4>
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <img id="weather-icon-1" src="" alt="">
                             <figcaption id="figcaption-1"></figcaption>
                         </figure>
-                        <p>Temperature: <span id="temp-1"></span></p>
+                        <p>Temperatura: <span id="temp-1"></span></p>
                     </div>
                     <div class="day-box">
                         <h4 id="day-02">${weekdays[(day + 2) % 7]}</h4>
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <img id="weather-icon-2" src="" alt="">
                             <figcaption id="figcaption-2"></figcaption>
                         </figure>
-                        <p>Temperature: <span id="temp-2"></span></p>
+                        <p>Temperatura: <span id="temp-2"></span></p>
                     </div>
                     <div class="day-box">
                         <h4 id="day-03">${weekdays[(day + 3) % 7]}</h4>
@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <img id="weather-icon-3" src="" alt="">
                             <figcaption id="figcaption-3"></figcaption>
                         </figure>
-                        <p>Temperature: <span id="temp-3"></span></p>
+                        <p>Temperatura: <span id="temp-3"></span></p>
                     </div>
                 </div>
             `;
@@ -243,7 +243,7 @@ async function getEvents() {
         const data = await response.json();
         return data.events;
     } catch (error) {
-        console.error("Error getting events:", error);
+        console.error("Error al obtener eventos:", error);
         return [];
     }
 }
@@ -255,7 +255,7 @@ async function displayEvents() {
     eventsContainer.innerHTML = "";
 
     if (events.length === 0) {
-        eventsContainer.innerHTML = "<p>No upcoming events at this time.</p>";
+        eventsContainer.innerHTML = "<p>No hay eventos próximos en este momento.</p>";
         return;
     }
 

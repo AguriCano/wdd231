@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO & OG -->
+  <meta name="description" content="Chamber directory, Perú" />
+  <meta name="author" content="Aguri Cano" />
+  <meta property="og:title" content="Directory | Chamber Perú">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.webp">
+  <meta property="og:url" content="https://tusitio.com/directory.html">
+  <meta property="og:description" content="Chamber of Perú, Join us to get more information">
+  <meta property="fb:app_id" content="your-app-id-here">
+
+  <!-- Title -->
+  <title>Directory | Perú Chamber of Commerce</title>
+
+  <!-- Preconnect & Preload Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap">
+  </noscript>
+
+  <!-- CSS (minificados preferiblemente) -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/home.css" />
+
+  <!-- Icono -->
+  <link rel="icon" href="images/logo_black.webp" sizes="48x48" type="image/webp">
+
+  <!-- Scripts -->
+  <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous" defer></script>
+  <script type="module" src="./scripts/app.js" defer></script>
+  <script src="./scripts/modules/home.js" defer></script>
+</head>
+
+<body id="index-page">
+  <header>
+    <nav>
+      <div class="box-logo-header">
+        <img class="logo-chamber" src="images/logo_white.webp" alt="Logo Chamber Perú" width="225" height="225" />
+        <h1 class="nameHeader">Perú City<br>Chamber of Commerce</h1>
+        <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
+      </div>
+      <ul>
+        <li><a class="nav-a" href="./index.html">Home</a></li>
+        <li><a class="nav-a" href="./discover.html">Discover</a></li>
+        <li><a class="nav-a" href="./directory.html">Directory</a></li>
+        <li><a class="nav-a" href="./join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-main-box">
+      <picture class="hero-box-img">
+        <source media="(max-width: 600px)" srcset="images/hero-chamber-410.png" width="410" height="205">
+        <source media="(max-width: 800px)" srcset="images/hero-chamber-600.png" width="600" height="300">
+        <source media="(max-width: 1200px)" srcset="images/hero-chamber-800.webp" width="854" height="480">
+        <source media="(min-width: 1201px)" srcset="images/hero-chamber-1200.png" width="1200" height="600">
+        <img class="hero-home-img" src="images/hero-chamber-410.png" alt="Panoramic view of Perú city" width="410" height="205" loading="eager">
+      </picture>
+
+      <div class="call-to-action">
+        <h2>Join the Perú Chamber of Commerce today!</h2>
+        <p>Enhance your business network, access exclusive resources, and drive local economic growth.</p>
+        <p>Click here to become a member and start making a difference.</p>
+        <a href="./join.html" class="join-us" role="button">Join us</a>
+      </div>
+    </section>
+
+    <section class="event-main-box">
+      <article class="event-main">
+        <h2>Current Events</h2>
+        <div id="events-list"></div>
+      </article>
+      <article class="weather-main" id="weather-main" aria-label="Current weather conditions"></article>
+      <article class="weather-forecast" id="weather-forecast" aria-label="Weather forecast"></article>
+    </section>
+
+    <section class="spotlights-main-box" aria-label="Business spotlights"></section>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> Aguri Cano | Perú</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+
+</html>

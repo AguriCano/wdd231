@@ -89,13 +89,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         urls.forEach((url, index) => {
             if (url && shuffledData[index]) {
                 url.href = `${shuffledData[index].Website}`;
-                url.innerHTML = `Visite the website`;
+                url.innerHTML = `Visit website`;
             }
         });
 
         members.forEach((member, index) => {
             if (member && shuffledData[index]) {
-                member.innerHTML = `Membership level: ${shuffledData[index].Membership}`;
+                member.innerHTML = `Membership Level: ${shuffledData[index].Membership}`;
             }
         });
 
@@ -106,13 +106,14 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
         });
     } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error getting data:", error);
     }
 });
 
+// Coordenadas de Lima, Perú
 const myKey = "90158c8799bb28ca5c3054efdcbe85fd";
-const myLat = "8.999893532275784";
-const myLon = "-79.52049637702123";
+const myLat = "-12.0464";
+const myLon = "-77.0428";
 
 const time = new Date();
 const day = time.getDay();
@@ -152,14 +153,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         eventMainBox.innerHTML = `
                 <div class="current-weather">
-                    <h2>The current Weather in: <span id="city-name">${
-                        data.name
-                    }</span></h2>
+                    <h2>Current weather in: <span id="city-name">${data.name}</span></h2>
                     <h4>${weekdays[day]}</h4>
                     <div class="weather-content"></div>
-                    <p>Temperature <span id="current-temp">${parseFloat(
-                        data.main.temp
-                    ).toFixed(0)}&deg;F</span></p>
+                    <p>Temperature: <span id="current-temp">${parseFloat(data.main.temp).toFixed(0)}&deg;F</span></p>
                     <figure>
                         <img id="weather-icon" src="${iconsrc}" alt="${desc}">
                         <figcaption>${desc}</figcaption>
@@ -196,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const forecast = document.createElement("article");
         forecast.className = "forecast";
         forecast.innerHTML = `
-                <h3>3-Days Weather Forecast</h3>
+                <h3>3-day weather forecast</h3>
                 <div class="main-day-box">
                     <div class="day-box">
                         <h4 id="day-01">${weekdays[(day + 1) % 7]}</h4>
@@ -228,18 +225,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const dailyForecasts = forecastData.list.slice(0, 3);
         dailyForecasts.forEach((dailyData, index) => {
-            //let decimalsCero =  parseFloat(dailyData.main.temp).toFixed(0);
-            //console.log(typeof(decimalsCero))
-            //console.log(decimalsCero)
-            document.getElementById(
-                `weather-icon-${index + 1}`
-            ).src = `https://openweathermap.org/img/wn/${dailyData.weather[0].icon}@2x.png`;
+            document.getElementById(`weather-icon-${index + 1}`).src =
+                `https://openweathermap.org/img/wn/${dailyData.weather[0].icon}@2x.png`;
             document.getElementById(`figcaption-${index + 1}`).textContent =
                 dailyData.weather[0].description;
-
-            document.getElementById(
-                `temp-${index + 1}`
-            ).textContent = `${parseFloat(dailyData.main.temp).toFixed(0)}°F`;
+            document.getElementById(`temp-${index + 1}`).textContent =
+                `${parseFloat(dailyData.main.temp).toFixed(0)}°F`;
         });
     };
 
@@ -252,7 +243,7 @@ async function getEvents() {
         const data = await response.json();
         return data.events;
     } catch (error) {
-        console.error("Error fetching events:", error);
+        console.error("Error getting events:", error);
         return [];
     }
 }
@@ -269,17 +260,15 @@ async function displayEvents() {
     }
 
     events.sort((a, b) => new Date(a.date) - new Date(b.date));
-
     const nextEvents = events.slice(0, 3);
 
-    // Loop through the next 3 events and create HTML to display
     nextEvents.forEach((event) => {
         const eventElement = document.createElement("div");
         eventElement.classList.add("event");
 
         eventElement.innerHTML = `
             <h3>${event.name}</h3>
-            <p>Date: ${new Date(event.date).toDateString()}</p>
+            <p>Fecha: ${new Date(event.date).toLocaleDateString()}</p>
         `;
 
         eventsContainer.appendChild(eventElement);
@@ -289,5 +278,3 @@ async function displayEvents() {
 document.addEventListener("DOMContentLoaded", () => {
     displayEvents();
 });
-
-//}
